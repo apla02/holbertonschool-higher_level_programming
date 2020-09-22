@@ -20,14 +20,14 @@ class Square():
     @property
     def size(self):
         '''
-            property property def size(self): to retrieve it
+            property  to retrieve it
         '''
         return self.__size
 
     @size.setter
     def size(self, value):
         '''
-            property property setter to set it
+            property  setter to set it
 
             Args:
             value : must be an integer and greater than zero"
