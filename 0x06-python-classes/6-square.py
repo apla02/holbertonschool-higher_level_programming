@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+Define a class Square
+"""
+
+
 class Square():
     '''
     This class represents a Square.
@@ -63,7 +68,7 @@ class Square():
         '''
         if self.__size == 0:
             print("")
+        for line in range(self.__position[1]):
+            print()
         for i in range(self.__size):
-            for j in range(self.__size):
-                print("#", end="")
-            print("")
+            print("{}{}".format((self.__position[0]* " "), ("#" * self.__size)))
