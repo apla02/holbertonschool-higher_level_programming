@@ -1,4 +1,6 @@
 #!/usr/bin/python3
 class Square():
-    """ class Square is empty"""
+    """
+        Class Square is empty
+    """
     pass
