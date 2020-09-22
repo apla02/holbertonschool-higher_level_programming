@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+'''
+Define a class Square empty
+'''
+
+
 class Square():
-    """ Class Square is empty """
+    """
+    class is empty
+    """
     pass
