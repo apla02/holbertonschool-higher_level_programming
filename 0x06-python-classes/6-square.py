@@ -1,22 +1,24 @@
 #!/usr/bin/python3
 class Square():
     '''
-        Define a Square
+        Define a class Square
     '''
 
     def __init__(self, size=0, position=(0, 0)):
-        '''Initialization of instance attributes
-            Args:
-            size (int): must be a integer and greater than zero
+        '''
+        Initialization of objects
+
+        Args:
+            size(int): size of square, must be integer and greater than zero
         '''
         self.size = size
         self.position = position
 
     def area(self):
         '''
-            Area of the square and return the area.
+            define a method to get an area of square class
         '''
-        return self.__size * self.__size
+        return self.__size ** 2
 
     @property
     def size(self):
@@ -67,4 +69,4 @@ class Square():
         for line in range(self.__position[1]):
                 print()
         for col in range(self.__size):
-            print("{}{}".format(" " * self.__position[0], "#" * self.__size))
+            print("{}{}".format(self.__position[0] * " ", "#" * self.__size))
