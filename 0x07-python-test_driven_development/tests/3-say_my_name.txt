@@ -1,23 +1,32 @@
+The ``0-add_integer`` module
+======================
+
+Using ``add_integer``
+-------------------
+
 >>> say_my_name = __import__('3-say_my_name').say_my_name
 
-print a full name
+print a full name:
 >>> say_my_name("John", "Smith")
 My name is John Smith
 
-No arguments
+No arguments:
 >>> say_my_name()
 Traceback (most recent call last):
 ...
 TypeError: say_my_name() missing 1 required positional argument: 'first_name'
 
+passing just the first argument:
 >>> say_my_name("Bob")
 My name is Bob 
 
+Passing a wrong argument:
 >>> say_my_name(12, "Olivar")
 Traceback (most recent call last):
 ...
 TypeError: first_name must be a string
 
+Passing wrong the second argument:
 >>> say_my_name("Juana", (12, 16))
 Traceback (most recent call last):
 ...
