@@ -32,6 +32,10 @@ checking class of return
 >>> type(add_integer(12.03, 1))
 <class 'int'>
 
+checking passing just the first argument
+>>> add_integer(2)
+100
+
 checking no pass arguments
 >>> add_integer()
 Traceback (most recent call last):
