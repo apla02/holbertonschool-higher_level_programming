@@ -1,0 +1,45 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+
+passing diferent types of arguments
+>>> add_integer(None)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+adding with arguments not int or not float
+>>> add_integer(1, "School")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+adding two numbers
+>>> add_integer(2, 3)
+5
+
+adding with negative number
+>>> add_integer(2, -94)
+-92
+
+adding two floats
+>>> add_integer(8.0, 2.0)
+10
+
+add one negative float and one integer
+>>> add_integer(-22.04, 1.0)
+-21
+
+checking class of return
+>>> type(add_integer(12.03, 1))
+<class 'int'>
+
+checking no pass arguments
+>>> add_integer()
+Traceback (most recent call last):
+    ...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+checking passing more than 2 arguments
+>>> add_integer(2, 7, 1)
+Traceback (most recent call last):
+    ...
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
