@@ -1,48 +1,58 @@
+The ``0-add_integer`` module
+======================
+
+Using ``add_integer``
+-------------------
+
 >>> add_integer = __import__('0-add_integer').add_integer
 
-passing diferent types of arguments
+passing diferent types of arguments:
 >>> add_integer(None)
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer
 
-adding with arguments not int or not float
+adding with arguments not int or not float:
 >>> add_integer(1, "School")
 Traceback (most recent call last):
     ...
 TypeError: b must be an integer
 
-adding two numbers
+adding two numbers:
 >>> add_integer(2, 3)
 5
 
-adding with negative number
+adding with negative number:
 >>> add_integer(2, -94)
 -92
 
-adding two floats
+adding two floats:
 >>> add_integer(8.0, 2.0)
 10
 
-add one negative float and one integer
+add one negative float and one integer:
 >>> add_integer(-22.04, 1.0)
 -21
 
-checking class of return
+Adding big numbers:
+>>> add_integer(1213213213213213212313213212313223, 45465456465465465465465465465)
+1213258678669678677778678677778688
+
+checking class of return:
 >>> type(add_integer(12.03, 1))
 <class 'int'>
 
-checking passing just the first argument
+checking passing just the first argument:
 >>> add_integer(2)
 100
 
-checking no pass arguments
+checking no pass arguments:
 >>> add_integer()
 Traceback (most recent call last):
     ...
 TypeError: add_integer() missing 1 required positional argument: 'a'
 
-checking passing more than 2 arguments
+checking passing more than 2 arguments:
 >>> add_integer(2, 7, 1)
 Traceback (most recent call last):
     ...
