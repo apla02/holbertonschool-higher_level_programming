@@ -3,8 +3,14 @@ The ``0-add_integer`` module
 
 Using ``add_integer``
 -------------------
+Checking docstring for module:
+>>> __import__('0-add_integer').__doc__ != None
+True
 
 >>> add_integer = __import__('0-add_integer').add_integer
+
+>>> len(add_integer.__doc__) > 0
+True
 
 passing diferent types of arguments:
 >>> add_integer(None)
