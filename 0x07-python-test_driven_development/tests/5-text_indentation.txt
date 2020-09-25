@@ -8,12 +8,6 @@ Check docstring for function:
 >>> len(text_indentation.__doc__) > 0
 True
 
-indentation with a wrong argument
->>> text_indentation(2)
-Traceback (most recent call last):
-...
-TypeError: text must be a string
-
 indentation normal string
 >>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
 ... Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
@@ -52,6 +46,23 @@ Quae animi affectio suum cuique tribuens atque hanc, quam dico.
 <BLANKLINE>
 Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
 
+>>> text_indentation("Test.Test:Test?Test")
+Test.
+<BLANKLINE>
+Test:
+<BLANKLINE>
+Test?
+<BLANKLINE>
+Test
+
+>>> text_indentation("?.:")
+?
+<BLANKLINE>
+.
+<BLANKLINE>
+:
+<BLANKLINE>
+
 indentation without arguments
 >>> text_indentation()
 Traceback (most recent call last):
@@ -63,3 +74,15 @@ indentation with 2 or more arguments
 Traceback (most recent call last):
 ...
 TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+indentation with a wrong argument
+>>> text_indentation(2)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+indentation with a wrong argument
+>>> text_indentation(None)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
