@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-'''
-    add a (float or int) and b (float or int)
-'''
+"""add a (float or int) and b (float or int)
+
+
+
+"""
 
 
 def add_integer(a, b=98):
