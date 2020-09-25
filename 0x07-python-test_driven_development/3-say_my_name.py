@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""
-function to print a full name with two strings
+"""function to print a full name with two strings
 """
 
 
