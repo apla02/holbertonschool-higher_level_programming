@@ -1,22 +1,20 @@
 #!/usr/bin/python3
-"""indenttion  of a string
-
-
+"""[summary]
 """
 
 
 def text_indentation(text):
-    """indent a string
+    """indentation a string
 
     Args:
-        text (str): a string
-
-    Raises:
-        TypeError: must be a string
+        text (str): [string]
     """
-    if not isinstance(text, str):
+    begin = 0
+    if type(text) != str:
         raise TypeError("text must be a string")
-    text = text.replace('. ', '.\n\n')
-    text = text.replace('? ', '?\n\n')
-    text = text.replace(': ', ':\n\n')
-    print(text, end='')
+    for i, j in enumerate(text):
+        if j in '.?:':
+            print(text[begin: i + 1].strip() + '\n')
+            begin = i + 1
+    if begin < len(text):
+        print(text[begin:].strip(), end="")
