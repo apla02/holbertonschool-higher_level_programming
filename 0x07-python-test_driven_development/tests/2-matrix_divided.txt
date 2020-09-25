@@ -77,10 +77,26 @@ Traceback (most recent call last):
         ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-matrix empty
+list empty
 >>> matrix = []
 >>> matrix_divided(matrix, 2)
-[]
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+matrix empty
+>>> matrix = [[]]
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+matrix empty
+>>> matrix = [[], [], []]
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 passing a col type str
 >>> matrix = [["Hello", 2, 3],[4, 5, 6]]
