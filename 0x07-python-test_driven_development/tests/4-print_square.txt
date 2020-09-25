@@ -3,8 +3,15 @@ The ``4-print_square`` module
 
 Using ``print_square``
 -------------------
+checking the function
+>>> __import__('4-print_square').__doc__ != None
+True
 
 >>> print_square = __import__('4-print_square').print_square
+
+checking the module
+>>> len(print_square.__doc__) > 0
+True
 
 print a square of size 5:
 >>> print_square(5)
