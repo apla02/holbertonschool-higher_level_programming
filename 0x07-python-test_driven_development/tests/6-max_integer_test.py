@@ -11,18 +11,10 @@ class TestMaxInteger(unittest.TestCase):
         check valid cases:
         '''
         self.assertEqual(max_integer([6, 2, 3, 4]), 6)
-        self.assertEqual(max_integer([6, -2, 13, -4]), 13)
         self.assertEqual(max_integer([-6, -2, -13, -4]), -2)
         self.assertEqual(max_integer([1]), 1)
         self.assertEqual(max_integer([3, 3, 3]), 3)
         self.assertEqual(max_integer([-2.2, -3.1, 4.1]), 4.1)
-
-    def test_bignumbers(self):
-        '''
-        check big numbers
-        '''
-        list_ej = [865843267874632176524237863524, 762354635687654237876545678]
-        self.assertEqual(max_integer(list_ej), 865843267874632176524237863524)
 
     def test_list_empty(self):
         '''
@@ -34,15 +26,8 @@ class TestMaxInteger(unittest.TestCase):
         '''
         check the diferent type of argument
         '''
-        with self.assertRaises(TypeError):
-            list = max_integer((1, 2))
-
-    def test_type_element_string(self):
-        '''
-        check the diferent type of argument
-        '''
-        with self.assertRaises(TypeError):
-            list = max_integer(["str", 1, 3, 6])
+        self.assertRaises(TypeError, max_integer, None)
+        self.assertRaises(TypeError, max_integer, ["str", 1, 3, 6])
 
 if __name__ == '__main__':
     unittest.main()
