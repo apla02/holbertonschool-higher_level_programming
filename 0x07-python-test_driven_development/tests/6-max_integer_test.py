@@ -6,7 +6,6 @@ max_integer = __import__('6-max_integer').max_integer
 
 
 class TestMaxInteger(unittest.TestCase):
-
     def test_max_integer(self):
         '''
         check valid cases:
@@ -37,13 +36,6 @@ class TestMaxInteger(unittest.TestCase):
         '''
         with self.assertRaises(TypeError):
             list = max_integer((1, 2))
-
-    def test_typestring(self):
-        '''
-        check the diferent type of argument
-        '''
-        with self.assertRaises(TypeError):
-            list = max_integer("adsfuifh")
 
     def test_type_element_string(self):
         '''
