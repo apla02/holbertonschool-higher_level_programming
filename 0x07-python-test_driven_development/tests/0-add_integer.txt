@@ -63,3 +63,15 @@ checking passing more than 2 arguments:
 Traceback (most recent call last):
     ...
 TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+try convert float NaN to integer:
+>>> add_integer(float('nan'), -2)
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
+
+try convert float inf to integer:
+>>> add_integer(float('inf'), -2)
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
