@@ -16,6 +16,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([-6, -2, -13, -4]), -2)
         self.assertEqual(max_integer([1]), 1)
         self.assertEqual(max_integer([3, 3, 3]), 3)
+        self.assertEqual(max_integer([-2.2, -3.1, 4.1]), 4.1)
 
     def test_bignumbers(self):
         '''
@@ -29,13 +30,6 @@ class TestMaxInteger(unittest.TestCase):
         check list empty
         '''
         self.assertEqual(max_integer([]), None)
-
-    def test_typefloat(self):
-        '''
-        check if element is float
-        '''
-        with self.assertRaises(TypeError):
-            list = max_integer([-2.2, -3.1, 4.1])
 
     def test_typelist(self):
         '''
