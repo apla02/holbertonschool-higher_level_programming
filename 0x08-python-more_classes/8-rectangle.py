@@ -84,9 +84,7 @@ class Rectangle:
     def __repr__(self):
         """returns area or rectangle using __repr__
         """
-        repr_interpretable = ("{self.__class__.__name__}\
-                            ({self.width}, {self.height})".format(self=self))
-        return repr_interpretable
+    return "Rectangle({}, {})".format(self.width, self.height)
 
     def __del__(self):
         """print message when instance is deleted
