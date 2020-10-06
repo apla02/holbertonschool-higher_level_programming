@@ -6,5 +6,6 @@
 
 def lookup(obj):
     '''
+    function to returns attributes of object/instance
     '''
     return (dir(obj))
