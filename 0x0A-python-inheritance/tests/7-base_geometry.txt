@@ -1,0 +1,13 @@
+The ``7-base_geometry`` module
+======================
+
+Using ``base_geometry``
+-------------------
+Checking docstring for module:
+>>> __import__('7-base_geometry').__doc__ != None
+True
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> len(MyList.__doc__) > 0
+True
