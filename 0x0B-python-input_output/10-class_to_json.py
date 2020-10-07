@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-import json
 '''
     class_to_json fuction
 '''
-
+import json
 
 def class_to_json(obj):
     '''
@@ -11,4 +10,5 @@ def class_to_json(obj):
     with simple data structure for JSON serialization of an object
     '''
 
-    return (obj.__dict__)
+    return vars(obj)
+    #obj.__dic__
