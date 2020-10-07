@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import json
 '''
-    module to serialize and object
+    this module to serialize and object
 '''
 
 
