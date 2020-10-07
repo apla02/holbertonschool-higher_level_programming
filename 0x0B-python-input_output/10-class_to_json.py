@@ -2,7 +2,6 @@
 '''
     class_to_json fuction
 '''
-import json
 
 
 def class_to_json(obj):
