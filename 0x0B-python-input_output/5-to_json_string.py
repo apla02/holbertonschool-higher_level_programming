@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-import json
 '''
     this module to serialize and object
 '''
+import json
 
 
 def to_json_string(my_obj):
