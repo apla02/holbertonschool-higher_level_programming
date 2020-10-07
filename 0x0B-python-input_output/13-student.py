@@ -25,13 +25,14 @@ class Student:
         '''
         method to retrieves the dictionary repr of a class
         '''
-        dictionary = {}
-        if type(attrs) == list:
+        dictionar = {}
+        if type(attrs) is list:
             for i in attrs:
                 if type(i) is str and i in self.__dict__.keys():
-                    dictionary[i] = self.__dict__[i]
-                    return dictionary
-        return self.__dict__
+                    dictionar[i] = self.__dict__[i]
+            return dictionar
+        else:
+            return self.__dict__
 
     def reload_from_json(self, json):
         '''
