@@ -31,9 +31,16 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    def __str__(self):
+        '''
+            method to return the string representation of class Square
+        '''
+        return "[Square] ({}) {}/{} - {}".format(
+            self.id, self.x, self.y, self.size)
+
     def update(self, *args, **kwargs):
         '''
-            method to update a Square Class
+            method to update a Square
         '''
         if kwargs is not None and len(args) == 0:
             for key, value in kwargs.items():
@@ -48,9 +55,10 @@ class Square(Rectangle):
             except IndexError:
                 pass
 
-    def __str__(self):
+    def to_dictionary(self):
         '''
-            method to return the string representation of class Square
+            return a dictionary representation of a Square
         '''
-        return "[Square] ({}) {}/{} - {}".format(
-            self.id, self.x, self.y, self.size)
+        dic = dict(zip(["id", "size", "x", "y"], [
+            self.id, self.size, self.x, self.y]))
+        return dic
