@@ -3,11 +3,12 @@
 a new class of base
 '''
 import json
+import csv
 
 
 class Base:
     '''
-        Respresent a Base class
+        Represent a Base class
     '''
     __nb_objects = 0
 
@@ -39,8 +40,6 @@ class Base:
         '''
         filename = cls.__name__ + ".json"
         lista_dic = []
-        if list_objs is None:
-            lista_dic = []
         for i in list_objs:
             lista_dic.append(i.to_dictionary())
             with open(filename, mode="w") as f:
@@ -83,3 +82,10 @@ class Base:
         except Exception:
             pass
         return list2
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        list1 = []
+        filename = cls.__name__ + ".csv"
+        with open(filename, newline='') as csvfile:
+            write_this = csv.writer(fcsvfile, delimiter=" ")
