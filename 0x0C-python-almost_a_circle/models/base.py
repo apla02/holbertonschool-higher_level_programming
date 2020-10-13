@@ -40,10 +40,12 @@ class Base:
         '''
         filename = cls.__name__ + ".json"
         lista_dic = []
+        if list_objs is None:
+            lista_dic = []
         for i in list_objs:
             lista_dic.append(i.to_dictionary())
-            with open(filename, mode="w") as f:
-                f.write(cls.to_json_string(lista_dic))
+        with open(filename, mode="w") as f:
+            f.write(cls.to_json_string(lista_dic))
 
     @staticmethod
     def from_json_string(json_string):
