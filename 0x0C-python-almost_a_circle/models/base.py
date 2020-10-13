@@ -40,7 +40,7 @@ class Base:
         '''
         filename = cls.__name__ + ".json"
         lista_dic = []
-        if list_objs is None:
+        if list_objs is not None:
             for i in list_objs:
                 lista_dic.append(i.to_dictionary())
         with open(filename, mode="w") as f:
