@@ -86,7 +86,35 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
+        '''
+        Save a file to csv
+        '''
         list1 = []
         filename = cls.__name__ + ".csv"
-        with open(filename, newline='') as csvfile:
-            write_this = csv.writer(fcsvfile, delimiter=" ")
+        with open(filename, mode="w") as csvfile:
+            write_this = csv.writer(csvfile, delimiter=",")
+            if cls.__name__ is "Rectangle":
+                keys = ["id", "width", "height", "x", "y"]
+            elif cls.__name__ is "Square":
+                keys = ["id", "size", "x", "y"]
+            for i in list_objs:
+                write_this.writerow([getattr(i, key) for key in keys])
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        class method that read  a file from csv to jason
+        """
+        filename = cls.__name__ + ".csv"
+        list1 = []
+        with open(filename) as csvfile:
+            reader_ = csv.reader(csvfile)
+            if cls.__name__ is "Rectangle":
+                keys = ["id", "width", "height", "x", "y"]
+            elif cls.__name__ is "Square":
+                keys = ["id", "size", "x", "y"]
+            for line in reader_:
+                values = [int(line[i]) for i in range(len(line))]
+                obj = dict(zip(keys, values))
+                list1.append(cls.create(**obj))
+            return list1
