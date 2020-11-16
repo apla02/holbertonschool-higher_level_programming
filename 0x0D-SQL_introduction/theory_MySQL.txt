@@ -1,0 +1,60 @@
+What’s a database
+A database is an organized collection of structured information, or data,
+typically stored electronically in a computer system. A database is usually
+controlled by a database management system (DBMS). Together, the data and the DBMS,
+along with the applications that are associated with them, are referred to as a database
+system, often shortened to just database.
+
+Data within the most common types of databases in operation today is typically modeled in rows
+ and columns in a series of tables to make processing and data querying efficient.
+The data can then be easily accessed, managed, modified, updated, controlled, and organized.
+
+
+DBMS
+A database typically requires a comprehensive database software program known as a database 
+management system (DBMS). A DBMS serves as an interface between the database and its end users
+ or programs, allowing users to retrieve, update, and manage how the information is organized 
+and optimized. A DBMS also facilitates oversight and control of databases, enabling a variety 
+of administrative operations such as performance monitoring, tuning, and backup and recovery.
+
+Some examples of popular database software or DBMSs include MySQL, Microsoft Access, Microsoft SQL Server,
+FileMaker Pro, Oracle Database, and dBASE.
+
+Types of DBMS:
+*heriarchycal
+*network
+*relational
+*object oriented
+
+Relational database
+The relational model means that the logical data structures—the data tables, views, and indexes—are
+ separate from the physical storage structures. This separation means that database administrators 
+ can manage physical data storage without affecting access to that data as a logical structure. 
+ For example, renaming a database file does not rename the tables stored within it.
+
+ DDL(data definition language)
+ DDL statements are used to build and modify the structure of your tables and other objects in the 
+ database. When you execute a DDL statement, it takes effect immediately.
+ instructions are CREATE, ALTER y DROP
+
+ DML(Data manipulation language)
+ DML statements are used to work with the data in tables. When you are connected to most multi-user 
+ databases (whether in a client program or by a connection from a Web page script)
+ instructions are SHOW, SELECT, INSERT, UPDATE y DELETE
+
+https://dev.mysql.com/doc/refman/8.0/en/show-create-table.html sinonimus of describe and explain
+https://www.mysqltutorial.org/mysql-count/
+https://www3.ntu.edu.sg/home/ehchua/programming/sql/MySQL_Beginner.html
+https://www3.ntu.edu.sg/home/ehchua/programming/sql/MySQL_Beginner.html 
+
+
+SELECT AVG(precio)
+AS preciomedio
+FROM pedidos 
+
+SELECT * FROM pedidos WHERE precio > (SELECT AVG(score) FROM pedidos) 
+
+Escriba un script que enumere el número de registros con la misma puntuación 
+en la tabla second_table de la base de datos hbtn_0c_0 en su servidor MySQL.
+
+SELECT score, COUNT(score) AS number FROM second_table GROUP BY score ORDER BY number DESC;
