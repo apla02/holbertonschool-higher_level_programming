@@ -24,8 +24,8 @@ if __name__ == "__main__":
     query = session.query(State).order_by(State.id).filter(
             State.name == sys.argv[4]).all()
     if len(query) == 0:
-        print("No found")
+        print("Not found")
 
-    for i in query:
-        print("{}".format(i.id))
+    for numberid in query:
+        print("{}".format(numberid.id))
     session.close()
