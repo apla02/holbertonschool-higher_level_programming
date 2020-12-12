@@ -19,6 +19,9 @@ if __name__ == "__main__":
     Session = sessionmaker()
     Session.configure(bind=engine)
     session = Session()
-    for state in session.query(State).order_by(State.id).filter(State.id == 1):
-        print("{}: {}".format(state.id, state.name))
+    first_o = session.query(State).order_by(State.id).first()
+    if first_o is not None:
+        print("{}: {}".format(first_o.id, first_o.name))
+    else:
+        print("Nothing")
     session.close()
