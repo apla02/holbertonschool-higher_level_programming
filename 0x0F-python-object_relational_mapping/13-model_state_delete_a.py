@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" script that adds the State object “Louisiana”
+""" script that delete State objects that contain 'a'
     to the database hbtn_0e_6_usa
 """
 import sys
@@ -24,6 +24,6 @@ if __name__ == "__main__":
     row = session.query(State).order_by(State.id).filter(
             State.name.ilike('%a%')).all()
     for i in row:
-        session.delete(i)             
+        session.delete(i)
     session.commit()
     session.close()
