@@ -21,7 +21,7 @@ if __name__ == "__main__":
     Session = sessionmaker()
     Session.configure(bind=engine)
     session = Session()
-    row = session.query(State).order_by(State.id).filter(
+    row = session.query(State).filter(
             State.name.ilike('%a%')).all()
     for i in row:
         session.delete(i)
