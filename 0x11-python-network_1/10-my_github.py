@@ -16,4 +16,4 @@ if __name__ == "__main__":
     try:
         print(json_response.get("id"))
     except:
-        pass
+        print("None")
