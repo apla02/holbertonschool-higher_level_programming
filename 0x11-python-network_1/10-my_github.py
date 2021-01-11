@@ -12,8 +12,8 @@ if __name__ == "__main__":
     username = sys.argv[1]
     passw = sys.argv[2]
     response = request.get(url, auth=(username, passw))
-    json_response = response.json()
     try:
+        json_response = response.json()
         print(json_response.get("id"))
     except:
         print("None")
