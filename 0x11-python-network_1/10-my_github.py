@@ -11,10 +11,9 @@ if __name__ == "__main__":
     url = "https://api.github.com/user"
     username = sys.argv[1]
     passw = sys.argv[2]
-
     response = request.get(url, auth=(username, passw))
     json_response = response.json()
     try:
-        print(json_response["id"])
-    except Exception:
+        print(json_response.get("id"))
+    except:
         print("None")
