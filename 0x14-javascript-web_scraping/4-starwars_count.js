@@ -6,11 +6,11 @@ request(url, function (err, response, body) {
   if (err) {
     console.log(err);
   } else {
-    const jsonDict = JSON.parse(body);
+    const resultList = JSON.parse(body).results;
     let count = 0;
-    for (const films of jsonDict.results) {
-      for (let i = 0; i < films.characters.length; i++) {
-        if (films.characters[i] === 'https://swapi-api.hbtn.io/api/people/18/') {
+    for (let i = 0; i < resultList.length; i++) {
+      for (let j = 0; j < resultList[i].characters.length; j++) {
+        if (resultList[i].characters[j] === 'https://swapi-api.hbtn.io/api/people/18/') {
           count++;
         }
       }
