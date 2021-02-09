@@ -9,8 +9,8 @@ request(url, function (err, response, body) {
     const jsonDict = JSON.parse(body);
     let count = 0;
     for (const films of jsonDict.results) {
-      for (const i of films.characters) {
-        if (i === 'https://swapi-api.hbtn.io/api/people/18/' || i === 'http://swapi-api.hbtn.io/api/people/18/') {
+      for (let i = 0; i < films.characters.length; i++) {
+        if (films.characters[i] === 'https://swapi-api.hbtn.io/api/people/18/') {
           count++;
         }
       }
