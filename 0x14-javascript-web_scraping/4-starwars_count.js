@@ -10,7 +10,7 @@ request(url, function (err, response, body) {
     let count = 0;
     for (const films of jsonDict.results) {
       for (const i of films.characters) {
-        if (i === 'https://swapi-api.hbtn.io/api/people/18/') {
+        if (i === 'https://swapi-api.hbtn.io/api/people/18/' || i === 'http://swapi-api.hbtn.io/api/people/18/') {
           count++;
         }
       }
