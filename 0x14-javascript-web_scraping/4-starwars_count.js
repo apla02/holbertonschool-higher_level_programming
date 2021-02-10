@@ -6,11 +6,11 @@ request(url, function (err, response, body) {
   if (err) {
     console.log(err);
   } else {
-    const resultList = JSON.parse(body).results;
+    const jsonDict = JSON.parse(body);
     let count = 0;
-    for (let i = 0; i < resultList.length; i++) {
-      for (let j = 0; j < resultList[i].characters.length; j++) {
-        if (resultList[i].characters[j].includes('/18/')) {
+    for (const films of jsonDict.results) {
+      for (const i of films.characters) {
+        if (i.includes('/18/')) {
           count++;
         }
       }
