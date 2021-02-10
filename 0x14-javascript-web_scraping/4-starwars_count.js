@@ -10,7 +10,7 @@ request(url, function (err, response, body) {
     let count = 0;
     for (let i = 0; i < resultList.length; i++) {
       for (let j = 0; j < resultList[i].characters.length; j++) {
-        if (resultList[i].characters[j] === 'https://swapi-api.hbtn.io/api/people/18/') {
+        if (resultList[i].characters[j].includes('/18/')) {
           count++;
         }
       }
